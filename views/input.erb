@@ -1,0 +1,34 @@
+<h1>Find out how much shipping will cost</h1>
+
+<form action="/output">
+  <div class="form-group">
+    <label for="length">Length of your parcel</label>
+    <input id="length" name="length" class="form-control" type="number">
+  </div>
+  <div class='form-group'>
+    <label for="width">Width of your parcel</label>
+    <input id="width" name="width" class="form-control" type="number">
+  </div>
+  <div class="form-group"
+    <label for="height">Height of your parcel</label>
+    <input id="height" name="height" class="form-control" type="number">
+  </div>
+  <div class="form-group">
+    <label for="weight">Weight of your package</label>
+    <input id="weight" name="weight" class="form-control" type="number">
+  </div>
+  <div class="form-group">
+    <select class="form-control" name="distance" id="distance">
+      <option value= 0>State</option>
+      <option value= 5>National</option>
+      <option value= 10>International</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <select class="form-control" name="speed" id="speed">
+      <option value= 0>Standard</option>
+      <option value= 15>Express</option>
+    </select>
+  </div>
+  <button type="submit" class="btn">Go!</button>
+</form>
