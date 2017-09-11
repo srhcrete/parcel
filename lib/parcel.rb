@@ -10,11 +10,10 @@ class Parcel
 
   def base_cost
     volume = @length * @width * @height
-    base_cost = 0
     if volume < 8
-      base_cost = 5 + @weight * 0.5
-    elsif volume > 8
-      base_cost = 5 + (volume * 0.5) + (@weight * 0.5)
+      5 + @weight * 0.5
+    elsif volume >= 8
+      5 + (volume * 0.5) + (@weight * 0.5)
     end
   end
 
@@ -23,7 +22,7 @@ class Parcel
   end
 
   def total_cost
-    total = (base_cost + additional_fees)
-    total.to_f
+    total = base_cost() + additional_fees()
+    '%.2f' % total
   end
 end
